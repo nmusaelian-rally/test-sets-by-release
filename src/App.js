@@ -32,12 +32,12 @@ Ext.define('CustomApp', {
         var pendingTestCases = data.length;
          console.log(data.length);
          if (data.length ===0) {
-            this._createTestSetGrid(testSets);  //to force refresh on testset grid when there are no testsets in the iteration
+            this._createTestSetGrid(testSets);  
          }
          Ext.Array.each(data, function(testset){ 
             var ts  = {
                 FormattedID: testset.get('FormattedID'),   
-                _ref: testset.get('_ref'),  //required to make FormattedID clickable
+                _ref: testset.get('_ref'),  
                 TestCaseStatus: testset.get('TestCaseStatus'),
                 TestCaseCount: testset.get('TestCases').Count,
                 TestCases: []
@@ -81,7 +81,7 @@ Ext.define('CustomApp', {
                     text: 'Test Case Count', dataIndex: 'TestCaseCount',
                 },
                 {
-                    text: 'Test Case Status', dataIndex: 'TestCaseStatus', width: 40,
+                    text: 'Test Case Status', dataIndex: 'TestCaseStatus', width: 200,           //width: 40
                 },
                 {
                     text: 'TestCases', dataIndex: 'TestCases', 
